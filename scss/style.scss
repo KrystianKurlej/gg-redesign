@@ -1,3 +1,7 @@
-body{
-    color: red;
-}
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+@import "misc/footer";
