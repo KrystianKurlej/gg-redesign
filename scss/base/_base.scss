@@ -1,3 +1,29 @@
 body{
     margin: 0;
+    overflow: hidden;
+}
+
+a{
+    color: inherit;
+    font-weight: 500;
+}
+
+#sr-main{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - $header-width - 2 * $default-padding);
+    height: calc(100vh - $footer-height - $default-padding);
+    overflow: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#sr-webgg,
+#sr-main-center{
+    padding: $default-padding;
+}
+
+#sr-main-center{
+    flex-grow: 1;
 }

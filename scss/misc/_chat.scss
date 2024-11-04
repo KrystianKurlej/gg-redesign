@@ -1,0 +1,75 @@
+.chat-accordion-item{
+    margin-bottom: .5rem;
+}
+
+.status-li{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.status-li > div,
+.sr-user-status-wrap .sr-user-status,
+.sr-status{
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+}
+
+#sr-avatar-widget{
+    position: relative;
+}
+
+.sr-user-status-wrap{
+    position: absolute;
+    left: -.25rem;
+    top: -.25rem;
+    z-index: 2;
+
+    .sr-user-status{
+        width: .75rem;
+        height: .75rem;
+    }
+}
+
+.status-avail           { background-color: #4ADE80; }
+.status-talk_to_me      { background-color: #22C55E; border-bottom-right-radius: 5% !important; }
+.status-busy            { background-color: #38BDF8; }
+.status-dnd             { background-color: #DC2626; }
+.status-invisible       { background-color: #9CA3AF; }
+.status-not_avail       { background-color: #F87171; }
+
+#sr-webgg{
+    background-color: $color-gray-100;
+
+    .sr-contact-list{
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid $color-gray-300;
+
+        .sr-contact{
+            padding: .5rem;
+            border-radius: .5rem;
+            background-color: $color-gray-200;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            transition: $transition;
+            cursor: pointer;
+
+            &:not(:first-child){
+                margin-top: .5rem;
+            }
+
+            &:hover{
+                background-color: $color-gray-300;
+            }
+
+            .sr-user-avatar{
+                width: 2rem;
+                height: 2rem;
+                border-radius: $rounded;
+            }
+        }
+    }
+}

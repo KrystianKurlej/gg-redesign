@@ -1,0 +1,150 @@
+#sr-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $header-width;
+    background-color: $color-gray-800;
+    color: white;
+    height: calc(100vh - $footer-height - 3 * $default-padding);
+    padding: $default-padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #sr-logo{
+        margin: 0;
+        padding: calc($default-padding / 2);
+        background-color: $color-gray-700;
+        color: white;
+        border-radius: $rounded;
+        height: fit-content;
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        transition: $transition;
+        strong, span, i{
+            display: none;
+        }
+
+        &:after{
+            content: 'menu';
+            display: block;
+            font-size: .75rem;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        &:hover{
+            background-color: $color-gray-600;
+        }
+    }
+
+    #sr-mainnav{
+        display: flex;
+        flex-direction: column;
+
+        li{
+            position: relative;
+            background-color: inherit;
+            border-radius: $rounded;
+            transition: $transition;
+            margin-left: -.5rem;
+
+            &:hover{
+                background-color: $color-gray-700;
+            }
+
+            a{
+                display: block;
+                text-decoration: none;
+                padding: calc($default-padding / 2) $default-padding;
+            }
+            
+            a, a strong{
+                font-weight: 400;
+
+                i{
+                    display: none;
+                }
+                
+                i:not(:empty){
+                    font-family: $font-primary;
+                    font-style: normal;
+                    font-size: .75rem;
+                    font-weight: 600;
+                    height: 1rem;
+                    min-width: .75rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: .125rem;
+                }
+            }
+
+            i{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: .125rem;
+                background-color: orangered;
+                color: white;
+                border-radius: $rounded;
+            }
+        }
+    }
+
+    .sr-user-change-status{
+        position: relative;
+        margin: 1rem 0;
+
+        .sr-user-change-top{
+            padding: calc($default-padding / 2) $default-padding;
+            background-color: $color-gray-700;
+            border-radius: $rounded;
+
+            &:after{
+                content: 'Zmień status';
+            }
+        }
+
+        .sr-user-change-list{
+            position: absolute;
+            pointer-events: none;
+            opacity: 0;
+            transition: $transition;
+            bottom: -1.5rem;
+            left: 0;
+            width: calc($header-width - $default-padding);
+            background-color: white;
+            border-radius: $rounded;
+            padding: calc($default-padding / 2);
+            color: $color-gray-800;
+
+            .status-li{
+                padding: calc($default-padding / 2);
+                border-radius: $rounded;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover{
+                    background-color: $color-gray-200;
+                }
+            }
+        }
+
+        &:hover{
+            .sr-user-change-list{
+                opacity: 1;
+                pointer-events: auto;
+                bottom: -1rem;
+                box-shadow: $shadow;
+                z-index: 2;
+            }
+        }
+    }
+
+    .sr-user-avatar{
+        border-radius: $rounded;
+        margin-bottom: $default-padding;
+    }
+}

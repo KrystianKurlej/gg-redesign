@@ -1,3 +1,4 @@
+// Remove external stylesheets
 function removeExternalStylesheets() {
     const styleLinks = document.querySelectorAll('link[rel="stylesheet"]');
     
