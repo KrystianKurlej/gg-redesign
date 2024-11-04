@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "compile-sass": "^2.0.0"
+  },
+  "scripts": {
+    "dev": "sass --watch scss/style.scss:css/style.css",
+    "compress": "sass --style=compressed --no-source-map scss/style.scss:css/style.css",
+    "prefix": "postcss --use autoprefixer --replace css/style.css",
+    "build": "npm-run-all prefix compress"
+  }
+}

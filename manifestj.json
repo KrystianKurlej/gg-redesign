@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "GG Redesigned",
+    "version": "1.0",
+    "description": "Redesigned Gadu-Gadu",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://gg.pl/*"],
+        "css": ["css/style.css"],
+        "js": ["script.js"]
+      }
+    ]
+  }
