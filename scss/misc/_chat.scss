@@ -99,7 +99,6 @@
 }
 
 .chat-accordion-item{
-    padding: calc($default-padding / 2) $default-padding;
     border: 1px solid $color-gray-300;
     border-radius: $rounded;
     transition: $transition;
@@ -122,6 +121,7 @@
         align-items: center;
         justify-content: space-between;
         gap: .5rem;
+        padding: calc($default-padding / 2) $default-padding;
     }
 
     .chat-data{
@@ -154,6 +154,83 @@
             &:hover{
                 background-color: $color-gray-300;
             }
+        }
+    }
+
+    &.expanded .opened-item{
+        padding: $default-padding $default-padding calc($default-padding / 2);
+        border-top: 1px solid $color-gray-300;
+
+        .header{
+            .sr-user-avatar, .title, .chat-actions{
+                display: none;
+            }
+        }
+
+        .conversation-aol{
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            align-items: center;
+
+            .chat-aol-previous,
+            .chat-aol-archive{
+                padding: .5rem .75rem;
+                border-radius: $rounded;
+                transition: $transition;
+                cursor: pointer;
+                background-color: $color-gray-200;
+
+                &:hover{
+                    background-color: $color-gray-300;
+                }
+            }
+
+            .chat-aol-previous,
+            .chat-aol-archive,
+            .chat-aol-previous-spinner,
+            .chat-aol-previous-empty{
+                color: $color-gray-600;
+                font-size: .875rem;
+                text-decoration: none;
+            }
+
+            .d-none{
+                display: none;
+            }
+        }
+
+        .footer{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: calc($default-padding / 2);
+
+            .chat-toolbar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: .5rem;
+            }
+        }
+
+        .chat-area{
+            #chat-text{
+                border: 1px solid $color-gray-300;
+                border-radius: calc($rounded / 2);
+                padding: $rounded;
+                outline: none;
+                height: 60px;
+                font-size: .875rem;
+
+                &:focus-visible{
+                    outline: none;
+                    background-color: white;
+                }
+            }
+        }
+
+        .chat-submit-buttons{
+            display: none;
         }
     }
 }

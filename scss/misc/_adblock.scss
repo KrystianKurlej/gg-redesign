@@ -3,3 +3,11 @@
 #sr-advert-container{
     display: none;
 }
+
+#sr-mainnav{
+    li:nth-child(4),
+    li:nth-child(5),
+    li:nth-child(6){
+        display: none;
+    }
+}
