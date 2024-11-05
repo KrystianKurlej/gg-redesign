@@ -151,6 +151,6 @@
 
     .sr-user-avatar{
         border-radius: $rounded;
-        margin-bottom: $default-padding;
+        margin-bottom: calc($default-padding / 2);
     }
 }

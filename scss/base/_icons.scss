@@ -1,0 +1,9 @@
+.min-button i,
+.close-button i{
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+
+.close-button i     {background: url(https://api.iconify.design/material-symbols:close-rounded.svg);}
+.min-button i       {background: url(https://api.iconify.design/fluent:arrow-minimize-24-filled.svg);}

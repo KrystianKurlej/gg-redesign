@@ -42,6 +42,7 @@
 
 #sr-webgg{
     background-color: $color-gray-100;
+    flex-shrink: 0;
 
     .sr-contact-list{
         margin-top: 1rem;
@@ -100,15 +101,20 @@
 .chat-accordion-item{
     padding: calc($default-padding / 2) $default-padding;
     border: 1px solid $color-gray-300;
-    margin-bottom: calc($default-padding / 2);
     border-radius: $rounded;
     transition: $transition;
     cursor: pointer;
     position: relative;
+    max-width: 700px;
+    margin: 0 auto calc($default-padding / 2);
 
     &:hover,
     &.expanded{
         background-color: $color-gray-100;
+    }
+
+    &.collapsed .opened-item{
+        display: none;
     }
 
     .closed-item{
@@ -127,14 +133,27 @@
     .chat-btns{
         position: absolute;
         right: .5rem;
-        top: 0;
+        top: .5rem;
         display: flex;
         align-items: center;
         gap: .5rem;
 
+        .chat-counter{
+            display: none;
+        }
+
         a{
             width: 1.25rem;
             height: 1.25rem;
+            border-radius: $rounded;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover{
+                background-color: $color-gray-300;
+            }
         }
     }
 }
