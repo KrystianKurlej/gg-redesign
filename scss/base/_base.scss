@@ -14,7 +14,7 @@ a{
     right: 0;
     width: calc(100% - $header-width - 2 * $default-padding);
     height: calc(100vh - $footer-height - $default-padding);
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -26,4 +26,6 @@ a{
 
 #sr-main-center{
     flex-grow: 1;
+    overflow: scroll;
+    height: calc(100vh - $footer-height - $default-padding);
 }

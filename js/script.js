@@ -16,10 +16,15 @@ function removeExternalStylesheets() {
     });
 }
 
+function addInputPlaceholder(input, placeholder){
+    input.setAttribute('placeholder', placeholder);
+}
+
 removeExternalStylesheets();
 
 const observer = new MutationObserver((mutations) => {
     removeExternalStylesheets();
+    addInputPlaceholder(document.querySelector('#sr-contact-list-search .search-input'), 'Szukaj...');
 });
 
 observer.observe(document.documentElement, {

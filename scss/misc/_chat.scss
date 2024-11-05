@@ -10,6 +10,7 @@
 
 .status-li > div,
 .sr-user-status-wrap .sr-user-status,
+.chat-data .user-status,
 .sr-status{
     width: .5rem;
     height: .5rem;
@@ -47,6 +48,14 @@
         padding-top: 1rem;
         border-top: 1px solid $color-gray-300;
 
+        &::before{
+            content: 'Ostatnie kontakty';
+            font-size: .875rem;
+            color: $color-gray-400;
+            padding-bottom: .5rem;
+            display: block;
+        }
+
         .sr-contact{
             padding: .5rem;
             border-radius: .5rem;
@@ -70,6 +79,62 @@
                 height: 2rem;
                 border-radius: $rounded;
             }
+        }
+    }
+}
+
+#sr-main-center .main-container{
+    #main-wosp-banner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .share-links-widget,
+    .sr-chat-manager-empty{
+        display: none;
+    }
+}
+
+.chat-accordion-item{
+    padding: calc($default-padding / 2) $default-padding;
+    border: 1px solid $color-gray-300;
+    margin-bottom: calc($default-padding / 2);
+    border-radius: $rounded;
+    transition: $transition;
+    cursor: pointer;
+    position: relative;
+
+    &:hover,
+    &.expanded{
+        background-color: $color-gray-100;
+    }
+
+    .closed-item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+
+    .chat-data{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .chat-btns{
+        position: absolute;
+        right: .5rem;
+        top: 0;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        a{
+            width: 1.25rem;
+            height: 1.25rem;
         }
     }
 }

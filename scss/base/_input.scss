@@ -1,0 +1,21 @@
+@mixin input{
+    border: 1px solid $color-gray-300;
+    border-radius: $rounded;
+    padding: .5rem;
+    font-size: .875rem;
+    width: 100%;
+    transition: $transition;
+
+    &:focus{
+        border-color: $color-gray-400;
+    }
+
+    &:hover{
+        border-color: $color-gray-400;
+    }
+}
+
+#sr-contact-list-search .search-input{
+    @include input;
+    width: calc(100% - $default-padding);
+}
