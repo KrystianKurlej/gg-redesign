@@ -49,9 +49,15 @@
             border-radius: $rounded;
             transition: $transition;
             margin-left: -.5rem;
+            margin-bottom: .125rem;
 
-            &:hover{
+            &:hover,
+            &:has(.active){
                 background-color: $color-gray-700;
+            }
+
+            a.active{
+                color: $color-accent-300;
             }
 
             a{
