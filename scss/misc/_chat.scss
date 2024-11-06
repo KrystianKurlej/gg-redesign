@@ -235,11 +235,16 @@
 
         .item-conversation{
             .ml__item{
-                padding: .25rem 0;
+                padding: .5rem 0;
 
                 &--outgoing{
                     border-left: 2px solid $color-accent-400;
                     padding-left: .5rem;
+                    
+                }
+
+                &.ml__item--continued{
+                    padding-top: 0;
                 }
             }
         }
