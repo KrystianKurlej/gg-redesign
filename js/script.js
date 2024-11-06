@@ -16,10 +16,6 @@ function removeExternalStylesheets() {
     });
 }
 
-function addInputPlaceholder(input, placeholder){
-    input.setAttribute('placeholder', placeholder);
-}
-
 removeExternalStylesheets();
 
 const observer = new MutationObserver((mutations) => {
