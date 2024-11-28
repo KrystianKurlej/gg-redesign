@@ -1,11 +1,25 @@
+.giphy-btn{
+    font-size: 0%;
+}
+
+.giphy-btn::after{
+    content: '';
+}
+
 .min-button i,
 .close-btn i,
-.close-button i{
+.close-button i,
+.file-upload-btn i,
+.emots-btn i,
+.giphy-btn::after{
     width: 1rem;
     height: 1rem;
     display: block;
 }
 
-.close-btn i         {background: url(https://api.iconify.design/material-symbols:close-rounded.svg);}
-.close-button i      {background: url(https://api.iconify.design/material-symbols:close-rounded.svg);}
-.min-button i        {background: url(https://api.iconify.design/fluent:arrow-minimize-24-filled.svg);}
+.close-btn i {background: url(https://api.iconify.design/material-symbols:close-rounded.svg);}
+.close-button i {background: url(https://api.iconify.design/material-symbols:close-rounded.svg);}
+.min-button i {background: url(https://api.iconify.design/fluent:arrow-minimize-24-filled.svg);}
+.file-upload-btn i {background: url(https://api.iconify.design/ic:round-upload-file.svg);}
+.emots-btn i {background: url(https://api.iconify.design/mdi:emoticon-happy.svg);}
+.giphy-btn::after {background: url(https://api.iconify.design/ph:gif-bold.svg);}

@@ -1,9 +1,13 @@
 body #sr-footer{
-    background-color: $color-gray-700;
-    color: $color-gray-300;
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+#sr-footer,
+#footer{
+    background-color: $color-gray-700;
+    color: $color-gray-300;
     width: 100%;
     
     & > i.icon{
